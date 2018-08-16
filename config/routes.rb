@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   namespace :staff do
     root 'top#index'
+    get 'login' => 'sessions#new', as: :login
+    post 'session' => 'session#create', as: :session
+    delete 'session' => 'session#destroy'
   end
 
   namespace :admin do
@@ -11,7 +14,7 @@ Rails.application.routes.draw do
     root 'top#index'
   end
 
-  root 'errors#routing_error'
-  get '*anything' => 'errors#routing_error'
+  root 'errors#not_found'
+  get '*anything' => 'errors#not_found'
 
 end

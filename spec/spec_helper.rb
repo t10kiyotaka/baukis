@@ -15,8 +15,8 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
-  config.use_transactional_fixtures = true
+  # config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  # config.use_transactional_fixtures = true
   config.order = "random"
 
   config.include FactoryGirl::Syntax::Methods
