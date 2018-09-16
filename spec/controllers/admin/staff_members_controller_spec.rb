@@ -16,6 +16,7 @@ describe Admin::StaffMembersController do
     session[:last_access_time] = 1.second.ago
   end
 
+
   describe '#create' do
     example '職員一覧ページにリダイレクト' do
       post :create, staff_member: params_hash
