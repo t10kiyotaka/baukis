@@ -16,6 +16,6 @@ class Staff::ChangePasswordForm
     if valid?
       object.password = new_password
       object.save!
-    endÍ
+    end
   end
 end
